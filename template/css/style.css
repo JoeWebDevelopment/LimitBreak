@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body{
+	background-color: darkgray;
+}
+
+header{
+	height: 3vh;
+	width: 100vw-1vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: white;
+	align-items: center;
+}
+	
+nav{
+	margin-left: 3rem;
+	display: flex;
+	flex-direction: row;
+}
+
+nav>ul{
+	display: flex;
+	flex-direction: row;
+}
+
+.primary-nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: .5rem;
+}
+
+.primary-nav-links{
+	list-style: none;
+	text-decoration: none;
+}
+
+.primary-nav-links>a{
+	text-decoration: none;
+}
+
+header>button{
+	margin-right: 3rem;
+}
+	
+.mediumfont{
+
+}	
+
+.primaryfont{
+	font-family: 'Kanit', sans-serif;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+  
+.videosection {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56vw;
+  }
+  
+  .videos {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+  }
+  
+  .videosection section {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	color: #fff;
+	text-align: center;
+  }
+
+
+  .herofont{
+	font-family: 'Kanit', sans-serif;
+	font-size: 4rem;
+	text-transform: uppercase;
+	padding-bottom: 2vw;
+  }
+
+  .herosmall{
+	font-family: 'Kanit', sans-serif;
+	font-size: 2rem;
+	text-transform: uppercase;
+	padding-bottom: 2vw;
+  }
+
+  .whysection{
+	background-color: white;
+  }
+
+  .whysection h1{
+	text-align: center;
+  }
+
+  .whyfontlarge{
+	font-size: 2.5rem;
+	padding-bottom: 2.5vw;
+	font-family: 'Kanit' , sans-serif;
+	padding-top: 1.5vw;
+
+  }
+  
+  .whyfontsmall{
+	font-size: 2rem;
+	padding-bottom: 2.5rem;
+	font-family: 'Kanit' , sans-serif;
+	padding-left: 25vw;
+	padding-right: 25vw;
+	text-align: center;
+  }
+
+  
+
+  .twocolumn {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
+  }
+  
+  .twocolumn section {
+	width: 48%;
+	margin-bottom: 30px;
+	
+  }
+  
+  
+
+  .twocolumn section{
+	background-color: white;
+  }
+
+
+
+  .bluredbackground{
+	min-height: 50rem;
+	width: auto;
+	position: relative;
+  }
+  
+  .bluredbackground::before{
+	content: " ";
+	background-image: url("../assets/pexels-leon-ardho-1552242.jpg");
+	background-size: cover;
+	background-position: center center;
+	filter: blur(5px);
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+  }
+
+
+.cardcontainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	min-height: 50rem;
+	
+}
+
+.card{
+	background-color: whitesmoke;
+	width: 25vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	
+
+	
+}
+
+.specialLink{
+	text-decoration: none;
+	border: 2px solid black;
+	margin: 1rem;
+	padding: 1rem;
+	font-size: 1rem;
+	text-align: center;
+	background-color: purple;
+	color: white;
+}
+
+.card p{
+	font-size: 2rem;
+	padding: 0 2rem;
+	text-align: center;
+	margin: 1rem 1rem;
+}
+.card h3{
+	font-size: 2.5rem;
+	font-weight: 800;
+
+
+}
+
+.card img, video {
+	width: 100%;
+	height: auto;
+  }
+
+  .volunter{
+	height: auto;
+	text-align: center;
+	padding: 5vw 5vh;
+  }
+
+  @media screen and (max-width: 800px) {
+    .volunter {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+  .volunter h3{
+	font-size: 2.5rem;
+	padding-bottom: 3rem;
+  }
+
+  .volunter p{
+	font-size: 2rem;
+	padding: 0 2vw;
+	padding-bottom: 5vh;
+  }
+
+  .volunter a{
+	border: 2px solid white;
+	background-color: orange;
+	color: black;
+	padding: 1rem 2rem;
+	text-decoration: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .volunter a {
+        padding: .5rem; /* Reduce the padding on smaller screens */
+    }
+}
+
+  footer{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+  }
+
+  
+
+  .socialmedia>ul{
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+  }
+
+  .socialmedialinks i{
+	font-size: 2.5rem;
+	color: rgba(41, 41, 242, 0.603);
+  }
+
+  .sitemap h6{
+	font-size: 1.25rem;
+	font-weight: 800;
+}
+
+.sitemap a{
+	padding: 0.5rem 0.5rem;
+	text-decoration: none;
+	color: blue;
+	font-size: 1rem;
+}
+
+.contribute h6{
+	font-size: 1.25rem;
+	font-weight: 800;
+}
+
+.contribute a{
+	padding: 0.5rem 0.5rem;
+	text-decoration: none;
+	color: blue;
+	font-size: 1rem;
+}
+
+.address{
+	display: grid;
+	justify-self: end;
+	font-size: 1.8rem;
+}
+
+@media screen and (max-width: 600px) {
+	footer {
+	  display: grid;
+	  grid-template-columns: 1fr;
+	  justify-items: center;
+	  text-align: center;
+	  padding-top: 3vh;
+	}
+
+	.address, .socalmediasitemap, .socialmedialinks {
+        padding-bottom: 3vh;
+    }
+
+  }
+
+
+  @media screen and (max-width: 800px) {
+
+    .primaryfont{
+	    font-size: 1.2rem; 
+    }
+  
+    .herofont{
+	    font-size: 1.5rem;
+	    padding-bottom:.5rem;
+    }
+
+    .herosmall{
+	    font-size: .7rem;
+	    padding-bottom: .3rem;
+    }
+
+    .whyfontlarge{
+	    font-size: 2rem;
+	    padding-bottom: 2rem;
+    }
+  
+    .whyfontsmall{
+	    font-size: 1.5rem;
+	    padding-bottom: 2rem;
+	    padding-left: 10%;
+	    padding-right: 10%;
+    }
+
+    .twocolumn {
+	    grid-template-columns: 1fr;
+    }
+  
+    .twocolumn section {
+	    width: 90%;
+	    margin: 15px auto;
+    }
+
+    .cardcontainer{
+	    flex-direction: column;
+    }
+
+    .card{
+	    width: 80vw;
+	    margin-bottom: 1rem;
+    }
+
+    .card p, .volunter p {
+	    font-size: 1.5rem;
+	    padding: 0 1rem;
+    }
+
+    .card h3, .volunter h3 {
+	    font-size: 2rem;
+    }
+
+    .volunter{
+	    padding-top: 2rem;
+    }
+
+    .volunter a {
+        padding: .5rem 1rem; 
+    }
+
+    footer{
+	    grid-template-columns: 1fr;
+    }
+
+    .socialmedialinks i{
+	    font-size: 2rem;
+    }
+
+    .sitemap h6, .contribute h6 {
+	    font-size: 1rem;
+    }
+
+    .sitemap a, .contribute a {
+	    font-size: .8rem;
+    }
+
+    .address{
+	    font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socialmedia, .sitemap, .address {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* You can remove this if you don't want the last element to have a margin at the bottom */
+    .address {
+        margin-bottom: 0;
+    }
+}  
+
+@media screen and (max-width: 1000px) {
+
+    .primaryfont{
+	    font-size: 1.2rem; 
+    }
+  
+    .herofont{
+	    font-size: 1.5rem;
+	    padding-bottom:.5rem;
+    }
+
+    .herosmall{
+	    font-size: .7rem;
+	    padding-bottom: .3rem;
+    }
+
+    .whyfontlarge{
+	    font-size: 2rem;
+	    padding-bottom: 2rem;
+    }
+  
+    .whyfontsmall{
+	    font-size: 1.5rem;
+	    padding-bottom: 2rem;
+	    padding-left: 10%;
+	    padding-right: 10%;
+    }
+
+    .twocolumn {
+	    grid-template-columns: 1fr;
+    }
+  
+    .twocolumn section {
+	    width: 90%;
+	    margin: 15px auto;
+    }
+
+    .cardcontainer{
+	    flex-direction: column;
+    }
+
+    .card{
+	    width: 80vw;
+	    margin-bottom: 1rem;
+    }
+
+    .card p, .volunter p {
+	    font-size: 1.5rem;
+	    padding: 0 1rem;
+    }
+
+    .card h3, .volunter h3 {
+	    font-size: 2rem;
+    }
+
+    .volunter{
+	    padding-top: 2rem;
+    }
+
+    .volunter a {
+        padding: .5rem 1rem; 
+    }
+
+    footer{
+	    grid-template-columns: 1fr;
+    }
+
+    .socialmedialinks i{
+	    font-size: 2rem;
+    }
+
+    .sitemap h6, .contribute h6 {
+	    font-size: 1rem;
+    }
+
+    .sitemap a, .contribute a {
+	    font-size: .8rem;
+    }
+
+    .address{
+	    font-size: 1.5rem;
+    }
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/* flex the header, align the content so that it is centered and spaced evenly. Header should take up a small portion of the viewports height, and all of the width always. Background color, and fontsize. */
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
